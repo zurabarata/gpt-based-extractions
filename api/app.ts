@@ -1,3 +1,10 @@
 import app from '.';
 
-//app.listen(3000, () => console.log('🚀 Server ready at: http://localhost:3000'));
+//const server = app.listen(process.env.PORT || 3000, () => {
+//    console.log(`Server is running on port ${process.env.PORT || 3000}`);
+//});
+//server.timeout = 0;  // Disables the HTTP server timeout
+
+
+
+

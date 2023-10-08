@@ -37,7 +37,7 @@ async function fetchPdfText(pdfUrl: string): Promise<string | undefined> {
 async function main(content: string | undefined) {
     const params = {
         messages: [
-            { role: 'system', content: 'you are a tool service that can extracts structured data: senderName, recipientName, totalAmount, documentDate, documentNumber from document text and return it as a JSON object, if you cant find a value for a field return null for that field, return whatever you have in 5 secs' },
+            { role: 'system', content: 'you are a tool service that can extracts structured data: senderName, recipientName, totalAmount, documentDate, dueDate,  documentNumber from document text and return it as a JSON object, if you cant find a value for a field return null for that field, return whatever you have in 5 secs' },
             { role: 'user', content }
         ],
         model: 'gpt-3.5-turbo'

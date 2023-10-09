@@ -72,11 +72,11 @@ app.post('/', async (req, res) => {
 
         console.log("Sending to GPT-3"); // Debug log
         const result = await main(String(pdfText));
-        console.log("GPT-3 result:", result); // Debug log
+        console.log("GPT-3 result::", result); // Debug log
 
         res.send(result);
     } catch (error) {
-        console.error("An error occurred:", error);
+        console.error("An error occurred::", error);
         // @ts-ignore
         res.status(500).send(`An error occurred: ${error.message}`); // More detailed error message
     }

@@ -10,14 +10,14 @@
     {
       "src": "/(.*)",
       "dest": "api/index.ts"
-    },
-    {
-      "src": "/pdf.worker.js",
-      "dest": "/pdf.worker.js"
     }
   ],
   "functions": {
-    "api/*.ts": {
+    "api/index.ts": {
+      "memory": 3008,
+      "maxDuration": 120
+    },
+    "api/index.js": {
       "memory": 3008,
       "maxDuration": 120
     }

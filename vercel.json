@@ -15,7 +15,13 @@
       "src": "/pdf.worker.js",
       "dest": "/pdf.worker.js"
     }
-  ]
+  ],
+  "functions": {
+    "api/*.ts": {
+      "memory": 3008,
+      "maxDuration": 180
+    }
+  }
 }
 
 

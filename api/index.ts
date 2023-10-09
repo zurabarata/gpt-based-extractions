@@ -5,8 +5,6 @@ import 'dotenv/config';
 import pdfParse from 'pdf-parse';
 import cors from 'cors';
 
-// ... other imports
-
 const app = express();
 
 // Enable CORS for all routes and allow any origin

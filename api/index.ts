@@ -57,7 +57,7 @@ async function main(content: string | undefined) {
 app.use(express.json());
 
 app.post('/', async (req, res) => {
-    console.log("Received request:", req.body); // Debug log
+    console.log("Received request:", req.body); // Debug logs
 
     try {
         const pdfUrl = req.body.pdfUrl;

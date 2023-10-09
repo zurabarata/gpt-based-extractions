@@ -38,7 +38,7 @@ async function main(content: string | undefined) {
             { role: 'system', content: 'you are a tool service that can extracts structured data from document text and return it as a JSON object, if you cant find a value for a field return null for that field, sender/recipient data address should be bested inside sender/recipient object' },
             { role: 'user', content }
         ],
-        model: 'gpt-3.5-turbo'
+        model: 'text-davinci-002'
     };
     // TODO: fix params type
     const chatCompletion = await openai.chat.completions.create(params as any);

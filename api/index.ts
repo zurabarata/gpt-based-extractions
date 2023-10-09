@@ -38,10 +38,12 @@ async function main(content: string | undefined) {
             { role: 'system', content: 'you are a tool service that can extracts structured data from document text and return it as a JSON object, if you cant find a value for a field return null for that field, sender/recipient data address should be bested inside sender/recipient object' },
             { role: 'user', content }
         ],
-        model: 'gpt-3.5-turbo'
+        model: 'gpt-3.5-turbo',
     };
     // TODO: fix params type
+    console.log("About to make GPT-3 API call");
     const chatCompletion = await openai.chat.completions.create(params as any);
+    console.log("Received GPT-3 response");
     const generatedText = chatCompletion.choices[0]?.message?.content?.trim();
     try {
         const jsonObject = JSON.parse(generatedText || "{}");

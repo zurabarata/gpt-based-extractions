@@ -1,11 +1,5 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "api/index.ts",
-      "use": "@vercel/node"
-    }
-  ],
   "routes": [
     {
       "src": "/(.*)",
@@ -13,11 +7,7 @@
     }
   ],
   "functions": {
-    "api/test.js": {
-      "memory": 3008,
-      "maxDuration": 60
-    },
-    "api/*.js": {
+    "api/index.ts": {
       "memory": 3008,
       "maxDuration": 60
     }

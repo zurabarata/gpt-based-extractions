@@ -70,9 +70,9 @@ app.post('/', async (req, res) => {
         const pdfText = await fetchPdfText(pdfUrl);
         console.log("PDF Text fetched");
 
-        console.log("Sending to GPT-3"); // Debug log
+        console.log("Sending to GPT-3"); // Debug logs
         const result = await main(String(pdfText));
-        console.log("GPT-3 result::", result); // Debug log
+        console.log("GPT-3 result::", result); // Debug logs
 
         res.send(result);
     } catch (error) {

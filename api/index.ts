@@ -38,7 +38,7 @@ async function main(content: string | undefined) {
             { role: 'system', content: 'you are a tool service that extracts structured data (senderName, totalAmount, invoiceNumber) from document text and return it as a JSON object, if you cant find a value for a field return null for that field' },
             { role: 'user', content }
         ],
-        model: 'gpt-3.5',
+        model: 'gpt-3.5-turbo',
     };
     // TODO: fix params type
     console.log("About to make GPT-3 API call");

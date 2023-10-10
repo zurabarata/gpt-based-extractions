@@ -61,6 +61,13 @@ app.post('/', async (req, res) => {
 
     try {
         const pdfUrl = req.body.pdfUrl;
+
+        // Validate the PDF URL
+        if (!pdfUrl.match(/^(http|https):\/\/[^ "]+$/)) {
+            res.status(400).send("pdfUrl is not a valid URL");
+            return;
+        }
+
         if (!pdfUrl) {
             res.status(400).send("pdfUrl not provided in request body");
             return;
